@@ -1,5 +1,8 @@
 // функції для відображення елементів інтерфейсу.
 
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
+
 export function createMarkup(arr) {
   return arr
     .map(
@@ -8,11 +11,12 @@ export function createMarkup(arr) {
         views,
         comments,
         downloads,
-        previewURL,
+        webformatURL,
+        largeImageURL,
         tags,
         id,
       }) => `<li data-id="${id}">
-      <img src="${previewURL}" alt="${tags}" class="preview-image" width="360" height="152">
+      <img src="${webformatURL}" alt="${tags}" class="preview-image" width="360" height="152">
       <div class="info-container">
       <div class="info-box">
         <span class="label">Likes</span>

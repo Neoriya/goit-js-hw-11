@@ -32,7 +32,7 @@ export function fetchImages(userRequest) {
       return data.hits;
     })
     .catch(error => {
-      console.error('catch', error);
+      console.error('Error fetching images:', error);
       iziToast.error({
         message: error.message,
         backgroundColor: '#EF4040',
